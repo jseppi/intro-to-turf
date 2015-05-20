@@ -4,7 +4,7 @@
 
 w3c_slidy.mouse_click_enabled = false;
 
-var tnris, result;
+var tnris, result, display;
 $.get('data/tnris.geojson', function (data) {
   tnris = JSON.parse(data);
   console.log(tnris);
@@ -35,16 +35,22 @@ $('button').one('click', function (event) {
   var code = $(this).parent().find('code').text();
   $(this).hide();
 
-  eval(code);
+  if (code) {
+    eval(code);
+  }
 
-  console.log(result);
   map.addLayer(L.geoJson(result, {
     pointToLayer: function (featureData, latlng) {
       return L.circle(latlng, 2500);
     }
   }));
 
-  //todo: and also run the code
+  if (display) {
+    $(this).parent().append('<p class="display">' + display + '</p>');
+  }
+
+  code = null;
+  display = null;
 });
 
 $('body').click(function (event) {

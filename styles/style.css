@@ -1,5 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800|Gentium+Book+Basic);
 
+.slide p {
+    padding: 10px;
+    margin: 0 2em;
+    background: rgba(255,255,255,0.5);
+}
+
 small {
     font-size: 70%;
 }
@@ -34,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 div.slide h1 {
-    font-size: 120px;
+    font-size: 3.5em;
     text-align: center;
     margin: 10px auto;
     padding: 0;
@@ -42,7 +48,7 @@ div.slide h1 {
 
 body {
     font-family: 'Gentium Book Basic', serif;
-    background-color:#7BFFBE;
+    background-color:#2ECC71;
     font-weight: 400;
 }
 

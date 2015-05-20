@@ -1,0 +1,20 @@
+{
+  "name": "intro-to-turf",
+  "version": "1.0.0",
+  "author": {
+    "name": "James Seppi",
+    "url": "https://github.com/jseppi"
+  },
+  "description": "Introduction to Turf",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jseppi/intro-to-turf"
+  },
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-pandoc": "^0.2.1",
+    "gulp-webserver": "^0.9.1"
+  }
+}

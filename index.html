@@ -34,7 +34,7 @@ code > span.er { color: #c3bf9f; }
   <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
   <script src="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
   <script src="//api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js"></script>
-  <script src="scripts/corslite.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="scripts/Leaflet.MakiMarkers.js"></script>
   <link rel="stylesheet" href="styles/style.css" />
   <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
@@ -53,28 +53,72 @@ James Seppi
 </div>
 <div id="some-history" class="slide section level1">
 <h1>Some History</h1>
+<p>(from Tom MacWright - <a href="http://www.macwright.org/presentations/turf-geodc" class="uri">http://www.macwright.org/presentations/turf-geodc</a>)</p>
+<div class="incremental">
+<p>2000: <a href="http://tsusiatsoftware.net/jts/main.html">Java Topology Suite (JTS)</a></p>
+</div>
+<div class="incremental">
+<p>2003: <a href="http://trac.osgeo.org/geos/">GEOS</a>, JTS port to C++</p>
+</div>
+<div class="incremental">
+<p>2008: <a href="http://toblerity.org/shapely/manual.html">Shapely</a>, interface of GEOS to Python</p>
+</div>
+<div class="incremental">
+<p>2011: <a href="https://github.com/bjornharrtell/jsts">JavaScript Topology Suite (JSTS)</a>, JTS port to JS</p>
+</div>
+<div class="incremental">
+<p>2014: <a href="http://turfjs.org">Turf</a>, not a port</p>
+</div>
 </div>
 <div id="why" class="slide section level1">
 <h1>Why?</h1>
+<p>&quot;Isomorphic&quot;</p>
+</div>
+<div id="how-to-use" class="slide section level1">
+<h1>How to Use</h1>
+<p>GeoJSON</p>
+</div>
+<div id="geojson" class="slide section level1">
+<h1>GeoJSON</h1>
+<p>Lingua franca for geospatial data on the web</p>
+<p>Not GeoJohnson</p>
+<p>geojson.org</p>
+<p>geojson.io</p>
+<p>GitHub renders it</p>
+<p>github.com/tx.geojson</p>
 </div>
 <div id="examples" class="slide section level1">
 <h1>Examples</h1>
 <p>In the browser</p>
 <p>On the server</p>
+<button class="button">
+Show Demo
+</button>
+<div class="map hide">
+
+</div>
+</div>
+<div id="documentation-and-official-examples" class="slide section level1">
+<h1>Documentation and Official Examples</h1>
+<p>Something that the core team has worked hard on (morganherlocker, tmcw, lyzidiamond, tcql)</p>
 </div>
 <div id="visualizations-tools" class="slide section level1">
 <h1>Visualizations, Tools</h1>
-<p>turfjs.party etc</p>
+<p>http://turfjs.party/</p>
+<p>etc</p>
 </div>
 <div id="get-involved" class="slide section level1">
 <h1>Get Involved</h1>
 <p>Open Open-Source</p>
-<p>github</p>
+<p>GitHub</p>
+<p>1200 stars</p>
+<p>15 owners</p>
 <pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> x = y;
 x++;
 <span class="kw">function</span> <span class="fu">abc</span>(dev) {
   <span class="kw">return</span> dev;
 }</code></pre>
 </div>
+<script src="scripts/main.js"></script>
 </body>
 </html>

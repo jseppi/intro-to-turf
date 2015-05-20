@@ -61,6 +61,11 @@ In the browser
 
 On the server
 
+```javascript
+result = turf.explode(tnris);
+alert(result.features.length);
+```
+
 <button class="button">Show Demo</button>
 
 <div class="map hide"></div>

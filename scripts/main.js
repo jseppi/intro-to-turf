@@ -4,20 +4,14 @@
 
 w3c_slidy.mouse_click_enabled = false;
 
-var tnris;
+var tnris, result;
 $.get('data/tnris.geojson', function (data) {
   tnris = JSON.parse(data);
   console.log(tnris);
 });
 
-$('button').one('click', function (event) {
-  event.preventDefault();
-  event.stopPropagation();
-
-  var $map = $(this).parent().find('.map');
-  $map.show();
-
-  var map = L.map($map[0], {
+var setupMap = function(el) {
+  var map = L.map(el, {
     center: [31.96860, -99.90181],
     zoom: 6
   });
@@ -27,8 +21,28 @@ $('button').one('click', function (event) {
   });
 
   map.addLayer(base);
+  return map;
+};
 
-  map.addLayer(L.geoJson(tnris));
+$('button').one('click', function (event) {
+  event.preventDefault();
+  event.stopPropagation();
+
+  var $map = $(this).parent().find('.map');
+  $map.show();
+
+  var map = setupMap($map[0]);
+  var code = $(this).parent().find('code').text();
+  $(this).hide();
+
+  eval(code);
+
+  console.log(result);
+  map.addLayer(L.geoJson(result, {
+    pointToLayer: function (featureData, latlng) {
+      return L.circle(latlng, 2500);
+    }
+  }));
 
   //todo: and also run the code
 });

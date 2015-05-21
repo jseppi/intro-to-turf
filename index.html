@@ -55,28 +55,20 @@ James Seppi
 <p>Runs in the browser, or in <a href="http://nodejs.org">Node.js</a></p>
 </div>
 <div class="incremental">
+<p>Open Source, MIT-licensed</p>
 <p>Collection of small modules</p>
 </div>
-</div>
-<div id="modules" class="slide section level1">
-<h1>Modules</h1>
-<p>turf-area</p>
 <div class="incremental">
-<p>turf-buffer</p>
+<p><a href="http://turfjs.org">turfjs.org</a></p>
+<p><a href="https://github.com/turfjs">github.com/turfjs</a></p>
+<div class="figure">
+<img src="img/turflogo.png" />
 </div>
-<div class="incremental">
-<p>turf-distance</p>
-</div>
-<div class="incremental">
-<p>turf-intersect, turf-union, turf-merge</p>
-</div>
-<div class="incremental">
-<p>turf-aggregate, turf-along, turf-average, turf-bbox-polygon, turf-bearing, turf-bezier, turf-center, turf-centroid, turf-combine, turf-concave, turf-convex, turf-count, turf-destination, turf-deviation, turf-envelope, turf-erase, turf-explode, turf-extent, turf-featurecollection, turf-filter, turf-flip, turf-hex-grid, turf-inside, turf-isolines, turf-jenks, turf-kinks, turf-line-distance, turf-line-slice, turf-linestring, turf-max, turf-median, turf-midpoint, turf-min, turf-nearest, turf-planepoint, turf-point, turf-point-grid, turf-point-on-line, turf-point-on-surface, turf-polygon, turf-quantile, turf-random, turf-reclass, turf-remove, turf-sample, turf-simplify, turf-size, turf-square, turf-square-grid, turf-sum, turf-tag, turf-tin, turf-triangle-grid, turf-variance, turf-within</p>
 </div>
 </div>
 <div id="some-history" class="slide section level1">
 <h1>Some History</h1>
-<p>(from Tom MacWright - <a href="http://www.macwright.org/presentations/turf-geodc" class="uri">http://www.macwright.org/presentations/turf-geodc</a>)</p>
+<p>(from Tom MacWright - <a href="http://www.macwright.org/presentations/turf-geodc">http://www.macwright.org/presentations/turf-geodc</a>)</p>
 <div class="incremental">
 <p>2000: <a href="http://tsusiatsoftware.net/jts/main.html">Java Topology Suite (JTS)</a></p>
 </div>
@@ -90,50 +82,99 @@ James Seppi
 <p>2011: <a href="https://github.com/bjornharrtell/jsts">JavaScript Topology Suite (JSTS)</a>, JTS port to JS</p>
 </div>
 <div class="incremental">
-<p>2014: <a href="http://turfjs.org">Turf</a>, not a port</p>
+<p>2014: <a href="http://turfjs.org">Turf</a></p>
 </div>
 </div>
-<div id="some-history-1" class="slide section level1">
-<h1>Some History</h1>
-<p>Project started and managed by Morgan Herlocker (now at Mapbox)</p>
-<p>Open Source, MIT-licensed</p>
-<p>Aggregation, Measurement, Transformation, Misc, Interpolation, Classification, Joins, Types, and Helpers</p>
+<div id="about-turf.js" class="slide section level1">
+<h1>About Turf.js</h1>
+<p>Not a port, new implementations</p>
+<div class="incremental">
+<p>Project started and managed by <a href="https://github.com/morganherlocker">Morgan Herlocker</a> (now at <a href="http://mapbox.com">Mapbox</a>)</p>
+<div class="figure">
+<img src="img/morganherlocker.jpg" />
 </div>
-<div id="why" class="slide section level1">
-<h1>Why?</h1>
-<p>&quot;Isomorphic&quot;</p>
 </div>
-<div id="how-to-use" class="slide section level1">
-<h1>How to Use</h1>
-<p>GeoJSON</p>
+<div class="incremental">
+<p>1200 stars, 15 owners</p>
+<div class="figure">
+<img src="img/owners.png" />
+</div>
+</div>
+</div>
+<div id="modules" class="slide section level1">
+<h1>Modules</h1>
+<p>Aggregation, Measurement, Transformation, Interpolation, Classification, Joins, Types, and Helpers</p>
+<div class="incremental">
+<p>turf-area</p>
+</div>
+<div class="incremental">
+<p>turf-buffer</p>
+</div>
+<div class="incremental">
+<p>turf-distance</p>
+</div>
+<div class="incremental">
+<p>turf-intersect, turf-union, turf-merge</p>
+</div>
+<div class="incremental">
+<p>turf-aggregate, turf-along, turf-average, turf-bbox-polygon, turf-bearing, turf-bezier, turf-center, turf-centroid, turf-combine, turf-concave, turf-convex, turf-count, turf-destination, turf-deviation, turf-envelope, turf-erase, turf-explode, turf-extent, turf-featurecollection, turf-filter, turf-flip, turf-hex-grid, turf-inside, turf-isolines, turf-jenks, turf-kinks, turf-line-distance, turf-line-slice, turf-linestring, turf-max, turf-median, turf-midpoint, turf-min, turf-nearest, turf-planepoint, turf-point, turf-point-grid, turf-point-on-line, turf-point-on-surface, turf-polygon, turf-quantile, turf-random, turf-reclass, turf-remove, turf-sample, turf-simplify, turf-size, turf-square, turf-square-grid, turf-sum, turf-tag, turf-tin, turf-triangle-grid, turf-variance, turf-within</p>
+</div>
+</div>
+<div id="why-does-this-matter" class="slide section level1">
+<h1>Why does this matter?</h1>
+<p>New implementations, new algorithms - pretty fast!</p>
+<div class="incremental">
+<p>&quot;Isomorphic&quot; - browser and back-end</p>
+</div>
+<div class="incremental">
+<p>Loosely coupled functionality</p>
+</div>
+<div class="incremental">
+<p>Modular - take only what you need (good for browser usage)</p>
+</div>
+<div class="incremental">
+<p>Speaks <a href="http://geojson.org">GeoJSON</a></p>
+</div>
 </div>
 <div id="geojson" class="slide section level1">
 <h1>GeoJSON</h1>
 <p>Lingua franca for geospatial data on the web</p>
-<p>Not GeoJohnson</p>
-<p>Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon</p>
-<p>GeometryCollection, Feature, FeatureCollection</p>
-<p>geojson.org</p>
-<p>geojson.io</p>
-<p>GitHub renders it</p>
-<p>github.com/tx.geojson</p>
+<div class="incremental">
+<p>Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon, GeometryCollection</p>
 </div>
-<div id="word-of-warning" class="slide section level1">
-<h1>Word of Warning</h1>
-<p>Browser rendering of vectors is kinda slow</p>
-<p>turf is better on server-side</p>
-<p>but nonetheless, it is fun to see in a web map</p>
+<div class="incremental">
+<p>Feature, FeatureCollection (store properties with geometries)</p>
+</div>
+<div class="incremental">
+<p><a href="http://geojson.org">geojson.org</a></p>
+<p><a href="http://geojson.io">geojson.io</a></p>
+<p>GitHub renders it: <a href="https://github.com/tnris/tx.geojson">github.com/tnris/tx.geojson</a></p>
+</div>
+</div>
+<div id="not-geojohnson" class="slide section level1">
+<h1>Not GeoJohnson</h1>
+<div class="figure">
+<img src="img/geojohnson.png" />
+</div>
 </div>
 <div id="examples" class="slide section level1">
+<h1>Examples!</h1>
+<p>Word of Warning: Browser rendering performance</p>
+<div class="incremental">
+<p>Nonetheless, it is fun to see in a web map</p>
+</div>
+</div>
+<div id="examples-1" class="slide section level1">
 <h1>Examples</h1>
 <pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="co">//tnris geojson made with rasterio</span>
 result = tnris;</code></pre>
 <button class="button">
 Show Demo
 </button>
+
 </div>
-<div id="buffer-union-intersection" class="slide section level1">
-<h1>buffer, union, intersection</h1>
+<div id="todo-buffer-union-intersection" class="slide section level1">
+<h1>TODO: buffer, union, intersection</h1>
 </div>
 <div class="slide section level1">
 
@@ -142,6 +183,7 @@ display = <span class="st">&#39;Num Points: &#39;</span> + <span class="ot">resu
 <button class="button">
 Show Demo
 </button>
+
 </div>
 <div class="slide section level1">
 
@@ -153,6 +195,7 @@ result = <span class="ot">turf</span>.<span class="fu">featurecollection</span>(
 <button class="button">
 Show Demo
 </button>
+
 </div>
 <div class="slide section level1">
 
@@ -162,6 +205,7 @@ display = <span class="st">&#39;Num Points: &#39;</span> + <span class="ot">resu
 <button class="button">
 Show Demo
 </button>
+
 </div>
 <div class="slide section level1">
 
@@ -170,6 +214,7 @@ result = <span class="ot">turf</span>.<span class="fu">tin</span>(result);</code
 <button class="button">
 Show Demo
 </button>
+
 </div>
 <div id="grids" class="slide section level1">
 <h1>Grids</h1>
@@ -181,6 +226,7 @@ result = counted;</code></pre>
 <button class="button">
 Show Demo
 </button>
+
 </div>
 <div class="slide section level1">
 
@@ -192,6 +238,7 @@ result = counted;</code></pre>
 <button class="button">
 Show Demo
 </button>
+
 </div>
 <div class="slide section level1">
 
@@ -203,40 +250,46 @@ result = counted;</code></pre>
 <button class="button">
 Show Demo
 </button>
+
 </div>
 <div id="documentation" class="slide section level1">
-<h1>Documentation</h1>
-<p>Something that the core team has worked hard on (<a href="https://github.com/morganherlocker">morganherlocker</a>, <a href="https://github.com/tmcw">tmcw</a>, <a href="https://github.com/lyzidiamond">lyzidiamond</a>, <a href="https://github.com/tchannel">tchannel</a>)</p>
+<h1>Documentation!</h1>
+<p>Documentation has been at the forefront of development by the core team</p>
+<div class="incremental">
+<p>(especially: <a href="https://github.com/morganherlocker">morganherlocker</a>, <a href="https://github.com/tmcw">tmcw</a>, <a href="https://github.com/lyzidiamond">lyzidiamond</a>, <a href="https://github.com/tchannel">tchannel</a>)</p>
 <div class="figure">
 <img src="img/turfdocs.png" />
-
+</div>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="img/turfdocs2.png" />
-
+<img src="img/turfdocs2.png" alt="Interactive examples!" /><p class="caption">Interactive examples!</p>
 </div>
 </div>
 <div id="visualizations-tools" class="slide section level1">
 <h1>Visualizations, Tools</h1>
+<div class="figure">
+<img src="img/hex_temp_jvrousseau.png" alt="Average Temperature by Jordan Rousseau" /><p class="caption">Average Temperature by <a href="https://twitter.com/jvrousseau">Jordan Rousseau</a></p>
+</div>
+</div>
+<div id="visualizations-tools-1" class="slide section level1">
+<h1>Visualizations, Tools</h1>
 <p>https://www.mapbox.com/blog/playback-the-iditarod-with-turf/</p>
 <p>https://www.mapbox.com/blog/60-years-of-tornadoes-with-turf/</p>
-<p>http://turfjs.party/</p>
-<p>etc</p>
+<p>http://turfjs.party/ by <a href="https://github.com/frankrowe">tchannel</a></p>
+<p>http://frankrowe.org/ugis/ by <a href="https://github.com/frankrowe">frankrowe</a></p>
 </div>
 <div id="get-involved" class="slide section level1">
 <h1>Get Involved</h1>
-<p>Open Open-Source</p>
-<p>GitHub</p>
-<p>1200 stars</p>
-<p>15 owners</p>
-<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> x = y;
-x++;
-<span class="kw">function</span> <span class="fu">abc</span>(dev) {
-  <span class="kw">return</span> dev;
-}</code></pre>
+<p>Open-Source, developed in the open on GitHub: <a href="https://github.com/turfjs">github.com/turfjs</a></p>
+<div class="incremental">
+<p>Still more work to be done, docs to improve, code to write</p>
+</div>
+<div class="incremental">
+<p>Check out the issues: <a href="https://github.com/turfjs/turf/issues">github.com/turfjs/turf/issues</a></p>
+</div>
 </div>
 <script src="scripts/main.js"></script>
 </body>

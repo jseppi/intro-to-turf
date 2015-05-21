@@ -65,6 +65,11 @@ body {
     color: #3e3e3e;
 }
 
+body p, body ul {
+    font-size: 30pt;
+    line-height: 34pt;
+}
+
 ul { display: inline-block; }
 
 li { text-align: left; }
@@ -73,6 +78,7 @@ li { text-align: left; }
 
 .map {
     width: 90%;
+    max-width: 800px;
     height: 400px;
     border: 2px solid white;
     margin: 10px auto;

@@ -50,7 +50,7 @@ var runCode = function (event) {
 
   var geojsonLayer = L.geoJson(result, {
     pointToLayer: function (featureData, latlng) {
-      return L.circle(latlng, 2500);
+      return L.circle(latlng, 1000);
     },
     style: function (feature) {
       var color = '#2ECC71';

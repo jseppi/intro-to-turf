@@ -12,28 +12,17 @@ Runs in the browser, or in [Node.js](http://nodejs.org)
 
 . . .
 
+Open Source, MIT-licensed
+
 Collection of small modules
 
-# Modules
-
-turf-area
-
 . . .
 
-turf-buffer
+[turfjs.org](http://turfjs.org)
 
-. . .
+[github.com/turfjs](https://github.com/turfjs)
 
-turf-distance
-
-. . .
-
-turf-intersect, turf-union, turf-merge
-
-. . .
-
-turf-aggregate, turf-along, turf-average, turf-bbox-polygon, turf-bearing, turf-bezier, turf-center, turf-centroid, turf-combine, turf-concave, turf-convex, turf-count, turf-destination, turf-deviation, turf-envelope, turf-erase, turf-explode, turf-extent, turf-featurecollection, turf-filter, turf-flip, turf-hex-grid, turf-inside, turf-isolines, turf-jenks, turf-kinks, turf-line-distance, turf-line-slice, turf-linestring, turf-max, turf-median, turf-midpoint, turf-min, turf-nearest, turf-planepoint, turf-point, turf-point-grid, turf-point-on-line, turf-point-on-surface, turf-polygon, turf-quantile, turf-random, turf-reclass, turf-remove, turf-sample, turf-simplify, turf-size, turf-square, turf-square-grid, turf-sum, turf-tag, turf-tin, turf-triangle-grid, turf-variance, turf-within
-
+![](img/turflogo.png)
 
 # Some History
 
@@ -57,51 +46,103 @@ turf-aggregate, turf-along, turf-average, turf-bbox-polygon, turf-bearing, turf-
 
 . . .
 
-2014: [Turf](http://turfjs.org), not a port
+2014: [Turf](http://turfjs.org)
 
-# Some History
+# About Turf.js
 
-Project started and managed by Morgan Herlocker (now at Mapbox)
+Not a port, new implementations
 
-Open Source, MIT-licensed
+. . .
 
-Aggregation, Measurement, Transformation, Misc, Interpolation, Classification, Joins, Types, and Helpers
+Project started and managed by [Morgan Herlocker](https://github.com/morganherlocker) (now at [Mapbox](http://mapbox.com))
 
-# Why?
+![](img/morganherlocker.jpg)
 
-"Isomorphic"
+. . .
 
-# How to Use
+1200 stars, 15 owners
 
-GeoJSON
+![](img/owners.png)
+
+# Modules
+
+Aggregation, Measurement, Transformation, Interpolation, Classification, Joins, Types, and Helpers
+
+. . .
+
+turf-area
+
+. . .
+
+turf-buffer
+
+. . .
+
+turf-distance
+
+. . .
+
+turf-intersect, turf-union, turf-merge
+
+. . .
+
+turf-aggregate, turf-along, turf-average, turf-bbox-polygon, turf-bearing, turf-bezier, turf-center, turf-centroid, turf-combine, turf-concave, turf-convex, turf-count, turf-destination, turf-deviation, turf-envelope, turf-erase, turf-explode, turf-extent, turf-featurecollection, turf-filter, turf-flip, turf-hex-grid, turf-inside, turf-isolines, turf-jenks, turf-kinks, turf-line-distance, turf-line-slice, turf-linestring, turf-max, turf-median, turf-midpoint, turf-min, turf-nearest, turf-planepoint, turf-point, turf-point-grid, turf-point-on-line, turf-point-on-surface, turf-polygon, turf-quantile, turf-random, turf-reclass, turf-remove, turf-sample, turf-simplify, turf-size, turf-square, turf-square-grid, turf-sum, turf-tag, turf-tin, turf-triangle-grid, turf-variance, turf-within
+
+
+# Why does this matter?
+
+New implementations, new algorithms - pretty fast!
+
+. . .
+
+"Isomorphic" - browser and back-end
+
+. . .
+
+Loosely coupled functionality
+
+. . .
+
+Modular - take only what you need (good for browser usage)
+
+. . .
+
+Speaks [GeoJSON](http://geojson.org)
+
+. . .
 
 # GeoJSON
 
 Lingua franca for geospatial data on the web
 
-Not GeoJohnson
+. . .
 
-Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon
+Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon, GeometryCollection
 
-GeometryCollection, Feature, FeatureCollection
+. . .
 
-geojson.org
+Feature, FeatureCollection
+(store properties with geometries)
 
-geojson.io
+. . .
 
-GitHub renders it
+[geojson.org](http://geojson.org)
 
-github.com/tx.geojson
+[geojson.io](http://geojson.io)
 
+GitHub renders it: [github.com/tnris/tx.geojson](https://github.com/tnris/tx.geojson)
 
-# Word of Warning
+# Not GeoJohnson
 
-Browser rendering of vectors is kinda slow
+![](img/geojohnson.png)
 
-turf is better on server-side
+# Examples!
 
-but nonetheless, it is fun to see in a web map
+Word of Warning: Browser rendering performance
 
+. . .
+
+Nonetheless, it is fun to see in a web map
 
 # Examples
 
@@ -114,7 +155,7 @@ result = tnris;
 
 -----------------------------------------------------------
 
-# buffer, union, intersection
+#TODO: buffer, union, intersection
 
 -----------------------------------------------------------
 
@@ -197,18 +238,25 @@ result = counted;
 
 -----------------------------------------------------------
 
-# Documentation
+# Documentation!
 
-Something that the core team has worked hard on ([morganherlocker](https://github.com/morganherlocker), [tmcw](https://github.com/tmcw), [lyzidiamond](https://github.com/lyzidiamond), [tchannel](https://github.com/tchannel))
+Documentation has been at the forefront of development by the core team 
+
+. . .
+
+(especially: [morganherlocker](https://github.com/morganherlocker), [tmcw](https://github.com/tmcw), [lyzidiamond](https://github.com/lyzidiamond), [tchannel](https://github.com/tchannel))
 
 ![](img/turfdocs.png)
 
 -----------------------------------------------------------
 
-![](img/turfdocs2.png)
+![Interactive examples!](img/turfdocs2.png)
 
 -----------------------------------------------------------
 
+# Visualizations, Tools
+
+![Average Temperature by [Jordan Rousseau](https://twitter.com/jvrousseau)](img/hex_temp_jvrousseau.png)
 
 # Visualizations, Tools
 
@@ -216,24 +264,19 @@ https://www.mapbox.com/blog/playback-the-iditarod-with-turf/
 
 https://www.mapbox.com/blog/60-years-of-tornadoes-with-turf/
 
-http://turfjs.party/
+http://turfjs.party/ by [tchannel](https://github.com/frankrowe)
 
-etc
+http://frankrowe.org/ugis/ by [frankrowe](https://github.com/frankrowe)
+
 
 # Get Involved
 
-Open Open-Source
+Open-Source, developed in the open on GitHub: [github.com/turfjs](https://github.com/turfjs)
 
-GitHub
+. . .
 
-1200 stars
+Still more work to be done, docs to improve, code to write
 
-15 owners
+. . .
 
-```javascript
-var x = y;
-x++;
-function abc(dev) {
-  return dev;
-}
-```
+Check out the issues: [github.com/turfjs/turf/issues](https://github.com/turfjs/turf/issues) 

@@ -61,6 +61,18 @@ In the browser
 
 On the server
 
+---
+
+```javascript
+result = tnris;
+```
+
+<button class="button">Show Demo</button>
+
+<div class="map hide"></div>
+
+---
+
 ```javascript
 result = turf.explode(tnris);
 display = 'Num Points: ' + result.features.length;
@@ -72,14 +84,6 @@ display = 'Num Points: ' + result.features.length;
 
 ---
 
-```javascript
-result = turf.explode(tnris);
-alert(result.features.length);
-```
-
-<button class="button">Show Demo</button>
-
-<div class="map hide"></div>
 
 # Documentation and Official Examples
 

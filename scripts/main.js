@@ -39,11 +39,13 @@ $('button').one('click', function (event) {
     eval(code);
   }
 
-  map.addLayer(L.geoJson(result, {
+  var geojsonLayer = L.geoJson(result, {
     pointToLayer: function (featureData, latlng) {
       return L.circle(latlng, 2500);
     }
-  }));
+  }).addTo(map);
+
+  map.fitBounds(geojsonLayer.getBounds());
 
   if (display) {
     $(this).parent().append('<p class="display">' + display + '</p>');

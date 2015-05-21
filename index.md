@@ -172,20 +172,50 @@ Word of Warning: Browser rendering performance
 
 Nonetheless, it is fun to see in a web map
 
-# Examples
 
-Our basic FeatureCollection
+-----------------------------------------------------------
 
 ```javascript
-//tnris geojson made with rasterio
-result = tnris;
+var austin = turf.point([-97.743061, 30.267153]); //just geojson shorthand
+var buffered = turf.buffer(austin, 15, 'miles');
+result = turf.featurecollection([austin, buffered])
 ```
 
 <button class="button">Show Demo</button>
 
 -----------------------------------------------------------
 
-#TODO: buffer, union, intersection
+```javascript
+var austin = turf.point([-97.743061, 30.267153]); //just geojson shorthand
+var atxBuffer = turf.buffer(austin, 15, 'miles');
+var roundrock = turf.point([-97.678896, 30.508255]);
+var rrBuffer = turf.buffer(roundrock, 15, 'miles');
+result = turf.union(atxBuffer.features[0], rrBuffer.features[0]);
+```
+
+<button class="button">Show Demo</button>
+
+-----------------------------------------------------------
+
+```javascript
+var austin = turf.point([-97.743061, 30.267153]); //just geojson shorthand
+var atxBuffer = turf.buffer(austin, 15, 'miles');
+var roundrock = turf.point([-97.678896, 30.508255]);
+var rrBuffer = turf.buffer(roundrock, 15, 'miles');
+result = turf.intersect(atxBuffer.features[0], rrBuffer.features[0]);
+```
+
+<button class="button">Show Demo</button>
+
+-----------------------------------------------------------
+
+```javascript
+//tnris geojson made with rasterio
+display = tnris.type;
+result = tnris;
+```
+
+<button class="button">Show Demo</button>
 
 -----------------------------------------------------------
 
@@ -230,7 +260,6 @@ result = turf.tin(result);
 
 -----------------------------------------------------------
 
-# Grids
 
 ```javascript
 var bbox = turf.extent(tnris);

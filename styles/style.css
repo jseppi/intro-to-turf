@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800);
 
-a,
-a:link,
-a:visited {
+
+p a:link,
+p a:visited {
     color: #008025;
     text-decoration: underline;
 }

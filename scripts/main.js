@@ -41,7 +41,7 @@ var runCode = function (event) {
 
   if (result.type === 'FeatureCollection') {
     var maxPointCount = result.features.reduce(function (currMax, f) {
-      if (f.properties.pointCount && f.properties.pointCount > currMax) {
+      if (f.properties && f.properties.pointCount && f.properties.pointCount > currMax) {
         return f.properties.pointCount;
       }
       return currMax;

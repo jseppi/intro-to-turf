@@ -53,7 +53,7 @@ James Seppi
 </div>
 <div id="some-history" class="slide section level1">
 <h1>Some History</h1>
-<p>(from Tom MacWright - <a href="http://www.macwright.org/presentations/turf-geodc">http://www.macwright.org/presentations/turf-geodc</a>)</p>
+<p>(from Tom MacWright - <a href="http://www.macwright.org/presentations/turf-geodc" class="uri">http://www.macwright.org/presentations/turf-geodc</a>)</p>
 <div class="incremental">
 <p>2000: <a href="http://tsusiatsoftware.net/jts/main.html">Java Topology Suite (JTS)</a></p>
 </div>
@@ -98,9 +98,6 @@ James Seppi
 <button class="button">
 Show Demo
 </button>
-
-<div class="map hide"></div>
-
 </div>
 <div class="slide section level1">
 
@@ -109,9 +106,34 @@ display = <span class="st">&#39;Num Points: &#39;</span> + <span class="ot">resu
 <button class="button">
 Show Demo
 </button>
+</div>
+<div class="slide section level1">
 
-<div class="map hide"></div>
+<pre class="sourceCode javascript"><code class="sourceCode javascript">result = <span class="ot">turf</span>.<span class="fu">convex</span>(<span class="ot">turf</span>.<span class="fu">explode</span>(tnris));</code></pre>
+<button class="button">
+Show Demo
+</button>
+</div>
+<div class="slide section level1">
 
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> bbox = <span class="ot">turf</span>.<span class="fu">extent</span>(tnris);
+<span class="kw">var</span> grid = <span class="ot">turf</span>.<span class="fu">hexGrid</span>(bbox, <span class="dv">50</span>, <span class="st">&#39;miles&#39;</span>);
+result = grid;</code></pre>
+<button class="button">
+Show Demo
+</button>
+</div>
+<div class="slide section level1">
+
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> bbox = <span class="ot">turf</span>.<span class="fu">extent</span>(tnris);
+<span class="kw">var</span> grid = <span class="ot">turf</span>.<span class="fu">hexGrid</span>(bbox, <span class="dv">50</span>, <span class="st">&#39;miles&#39;</span>);
+<span class="kw">var</span> points = <span class="ot">turf</span>.<span class="fu">explode</span>(tnris);
+<span class="kw">var</span> counted = <span class="ot">turf</span>.<span class="fu">count</span>(grid, points, <span class="st">&#39;pointCount&#39;</span>);
+<span class="co">//TODO: Style by point count</span>
+result = counted;</code></pre>
+<button class="button">
+Show Demo
+</button>
 </div>
 <div id="documentation-and-official-examples" class="slide section level1">
 <h1>Documentation and Official Examples</h1>

@@ -7,7 +7,6 @@ w3c_slidy.mouse_click_enabled = false;
 var tnris, result, display;
 $.get('data/tnris.geojson', function (data) {
   tnris = JSON.parse(data);
-  console.log(tnris);
 });
 
 var setupMap = function(el) {
@@ -27,13 +26,16 @@ var setupMap = function(el) {
 $('button').one('click', function (event) {
   event.preventDefault();
   event.stopPropagation();
+  var $this = $(this);
+  var $parent = $this.parent();
 
-  var $map = $(this).parent().find('.map');
-  $map.show();
+  var $map = $('<div class="map"></div>');
+  $parent.append($map);
+
 
   var map = setupMap($map[0]);
-  var code = $(this).parent().find('code').text();
-  $(this).hide();
+  var code = $parent.find('code').text();
+  $this.hide();
 
   if (code) {
     eval(code);
@@ -42,13 +44,17 @@ $('button').one('click', function (event) {
   var geojsonLayer = L.geoJson(result, {
     pointToLayer: function (featureData, latlng) {
       return L.circle(latlng, 2500);
+    },
+    style: {
+      'color': '#2ECC71',
+      'opacity': 0.8
     }
   }).addTo(map);
 
   map.fitBounds(geojsonLayer.getBounds());
 
   if (display) {
-    $(this).parent().append('<p class="display">' + display + '</p>');
+    $parent.append('<p class="display">' + display + '</p>');
   }
 
   code = null;

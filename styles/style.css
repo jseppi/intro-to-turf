@@ -1,5 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800|Gentium+Book+Basic);
 
+a:link,
+a:visited {
+    color: #008025;
+}
+
 .slide p {
     padding: 10px;
     margin: 0 2em;

@@ -61,7 +61,7 @@ In the browser
 
 On the server
 
----
+-----------------------------------------------------------
 
 ```javascript
 result = tnris;
@@ -69,9 +69,7 @@ result = tnris;
 
 <button class="button">Show Demo</button>
 
-<div class="map hide"></div>
-
----
+-----------------------------------------------------------
 
 ```javascript
 result = turf.explode(tnris);
@@ -80,10 +78,38 @@ display = 'Num Points: ' + result.features.length;
 
 <button class="button">Show Demo</button>
 
-<div class="map hide"></div>
+-----------------------------------------------------------
 
----
+```javascript
+result = turf.convex(turf.explode(tnris));
+```
 
+<button class="button">Show Demo</button>
+
+-----------------------------------------------------------
+
+```javascript
+var bbox = turf.extent(tnris);
+var grid = turf.hexGrid(bbox, 50, 'miles');
+result = grid;
+```
+
+<button class="button">Show Demo</button>
+
+-----------------------------------------------------------
+
+```javascript
+var bbox = turf.extent(tnris);
+var grid = turf.hexGrid(bbox, 50, 'miles');
+var points = turf.explode(tnris);
+var counted = turf.count(grid, points, 'pointCount');
+//TODO: Style by point count
+result = counted;
+```
+
+<button class="button">Show Demo</button>
+
+-----------------------------------------------------------
 
 # Documentation and Official Examples
 

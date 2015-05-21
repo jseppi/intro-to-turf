@@ -2,6 +2,21 @@
 % James Seppi
 % TNRIS GeoRodeo - May 22, 2015
 
+-------------------------------------------------
+
+# Intro to Turf.js
+
+Presentation by James Seppi
+
+Software Developer at [TNRIS](http://tnris.org), part of [TWDB](http://www.twdb.texas.gov)
+
+Twitter: [hydrologee](http://twitter.com/hydrologee)
+
+Viewable at [http://jseppi.github.io/intro-to-turf/](http://jseppi.github.io/intro-to-turf/)
+
+Source code at [https://github.com/jseppi/intro-to-turf/](https://github.com/jseppi/intro-to-turf/)
+
+
 # What is Turf.js?
 
 JavaScript library for geospatial analysis

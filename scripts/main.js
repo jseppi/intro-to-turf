@@ -23,7 +23,7 @@ var setupMap = function(el) {
   return map;
 };
 
-$('button').one('click', function (event) {
+var runCode = function (event) {
   event.preventDefault();
   event.stopPropagation();
   var $this = $(this);
@@ -35,19 +35,37 @@ $('button').one('click', function (event) {
 
   var map = setupMap($map[0]);
   var code = $parent.find('code').text();
-  $this.hide();
+  
+  if (code) { eval(code); }
+  if (!result) { return; }
 
-  if (code) {
-    eval(code);
+  if (result.type === 'FeatureCollection') {
+    var maxPointCount = result.features.reduce(function (currMax, f) {
+      if (f.properties.pointCount && f.properties.pointCount > currMax) {
+        return f.properties.pointCount;
+      }
+      return currMax;
+    }, 0);
   }
 
   var geojsonLayer = L.geoJson(result, {
     pointToLayer: function (featureData, latlng) {
       return L.circle(latlng, 2500);
     },
-    style: {
-      'color': '#2ECC71',
-      'opacity': 0.8
+    style: function (feature) {
+      var color = '#2ECC71';
+      var opacity = 0.8;
+      var fillOpacity = 0.6;
+      if (feature.properties.hasOwnProperty('pointCount')) {
+        opacity = feature.properties.pointCount / maxPointCount;
+        fillOpacity = opacity;
+      }
+      return {
+        'color': color,
+        'fillColor': color,
+        'opacity': opacity,
+        'fillOpacity': fillOpacity
+      }; 
     }
   }).addTo(map);
 
@@ -57,9 +75,20 @@ $('button').one('click', function (event) {
     $parent.append('<p class="display">' + display + '</p>');
   }
 
+  $this.hide();
   code = null;
   display = null;
+};
+
+$('body').keypress(function (event) {
+  //find .slide without class .hidden
+  //if is has button, click() it
+  if (event.which === 13) {
+    $('div.slide').not('.hidden').find('button').click();
+  }
 });
+
+$('button').one('click', runCode);
 
 $('body').click(function (event) {
   //todo: only stop propagation if

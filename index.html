@@ -50,6 +50,16 @@ James Seppi
 </div>
 <div id="what-is-turf" class="slide section level1">
 <h1>What is Turf?</h1>
+<p>JavaScript library for geospatial analysis</p>
+<div class="incremental">
+<p>Runs in the browser, or in <a href="http://nodejs.org">Node.js</a></p>
+</div>
+<div class="incremental">
+<p>Collection of small modules</p>
+</div>
+</div>
+<div id="modules" class="slide section level1">
+<h1>Modules</h1>
 </div>
 <div id="some-history" class="slide section level1">
 <h1>Some History</h1>
@@ -70,6 +80,12 @@ James Seppi
 <p>2014: <a href="http://turfjs.org">Turf</a>, not a port</p>
 </div>
 </div>
+<div id="some-history-1" class="slide section level1">
+<h1>Some History</h1>
+<p>Project started and managed by Morgan Herlocker (now at Mapbox)</p>
+<p>Open Source, MIT-licensed</p>
+<p>Aggregation, Measurement, Transformation, Misc, Interpolation, Classification, Joins, Types, and Helpers</p>
+</div>
 <div id="why" class="slide section level1">
 <h1>Why?</h1>
 <p>&quot;Isomorphic&quot;</p>
@@ -82,22 +98,29 @@ James Seppi
 <h1>GeoJSON</h1>
 <p>Lingua franca for geospatial data on the web</p>
 <p>Not GeoJohnson</p>
+<p>Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon</p>
+<p>GeometryCollection, Feature, FeatureCollection</p>
 <p>geojson.org</p>
 <p>geojson.io</p>
 <p>GitHub renders it</p>
 <p>github.com/tx.geojson</p>
 </div>
+<div id="word-of-warning" class="slide section level1">
+<h1>Word of Warning</h1>
+<p>Browser rendering of vectors is kinda slow</p>
+<p>turf is better on server-side</p>
+<p>but nonetheless, it is fun to see in a web map</p>
+</div>
 <div id="examples" class="slide section level1">
 <h1>Examples</h1>
-<p>In the browser</p>
-<p>On the server</p>
-</div>
-<div class="slide section level1">
-
-<pre class="sourceCode javascript"><code class="sourceCode javascript">result = tnris;</code></pre>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="co">//tnris geojson made with rasterio</span>
+result = tnris;</code></pre>
 <button class="button">
 Show Demo
 </button>
+</div>
+<div id="buffer-union-intersection" class="slide section level1">
+<h1>buffer, union, intersection</h1>
 </div>
 <div class="slide section level1">
 
@@ -109,7 +132,39 @@ Show Demo
 </div>
 <div class="slide section level1">
 
-<pre class="sourceCode javascript"><code class="sourceCode javascript">result = <span class="ot">turf</span>.<span class="fu">convex</span>(<span class="ot">turf</span>.<span class="fu">explode</span>(tnris));</code></pre>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> merged = <span class="ot">turf</span>.<span class="fu">merge</span>(tnris);
+<span class="kw">var</span> polys = <span class="ot">merged</span>.<span class="ot">geometry</span>.<span class="ot">coordinates</span>.<span class="fu">map</span>(<span class="kw">function</span> (c) {
+  <span class="kw">return</span> <span class="ot">turf</span>.<span class="fu">simplify</span>(<span class="ot">turf</span>.<span class="fu">polygon</span>(c), <span class="fl">0.1</span>, <span class="kw">false</span>);
+});
+result = <span class="ot">turf</span>.<span class="fu">featurecollection</span>(polys);</code></pre>
+<button class="button">
+Show Demo
+</button>
+</div>
+<div class="slide section level1">
+
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="co">//use simplified result from previous example</span>
+result = <span class="ot">turf</span>.<span class="fu">explode</span>(result);
+display = <span class="st">&#39;Num Points: &#39;</span> + <span class="ot">result</span>.<span class="ot">features</span>.<span class="fu">length</span>;</code></pre>
+<button class="button">
+Show Demo
+</button>
+</div>
+<div class="slide section level1">
+
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="co">//use exploded result from previous example</span>
+result = <span class="ot">turf</span>.<span class="fu">tin</span>(result);</code></pre>
+<button class="button">
+Show Demo
+</button>
+</div>
+<div id="grids" class="slide section level1">
+<h1>Grids</h1>
+<pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> bbox = <span class="ot">turf</span>.<span class="fu">extent</span>(tnris);
+<span class="kw">var</span> grid = <span class="ot">turf</span>.<span class="fu">squareGrid</span>(bbox, <span class="dv">50</span>, <span class="st">&#39;miles&#39;</span>);
+<span class="kw">var</span> points = <span class="ot">turf</span>.<span class="fu">explode</span>(tnris);
+<span class="kw">var</span> counted = <span class="ot">turf</span>.<span class="fu">count</span>(grid, points, <span class="st">&#39;pointCount&#39;</span>);
+result = counted;</code></pre>
 <button class="button">
 Show Demo
 </button>
@@ -117,8 +172,10 @@ Show Demo
 <div class="slide section level1">
 
 <pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> bbox = <span class="ot">turf</span>.<span class="fu">extent</span>(tnris);
-<span class="kw">var</span> grid = <span class="ot">turf</span>.<span class="fu">hexGrid</span>(bbox, <span class="dv">50</span>, <span class="st">&#39;miles&#39;</span>);
-result = grid;</code></pre>
+<span class="kw">var</span> grid = <span class="ot">turf</span>.<span class="fu">triangleGrid</span>(bbox, <span class="dv">50</span>, <span class="st">&#39;miles&#39;</span>);
+<span class="kw">var</span> points = <span class="ot">turf</span>.<span class="fu">explode</span>(tnris);
+<span class="kw">var</span> counted = <span class="ot">turf</span>.<span class="fu">count</span>(grid, points, <span class="st">&#39;pointCount&#39;</span>);
+result = counted;</code></pre>
 <button class="button">
 Show Demo
 </button>
@@ -129,18 +186,30 @@ Show Demo
 <span class="kw">var</span> grid = <span class="ot">turf</span>.<span class="fu">hexGrid</span>(bbox, <span class="dv">50</span>, <span class="st">&#39;miles&#39;</span>);
 <span class="kw">var</span> points = <span class="ot">turf</span>.<span class="fu">explode</span>(tnris);
 <span class="kw">var</span> counted = <span class="ot">turf</span>.<span class="fu">count</span>(grid, points, <span class="st">&#39;pointCount&#39;</span>);
-<span class="co">//TODO: Style by point count</span>
 result = counted;</code></pre>
 <button class="button">
 Show Demo
 </button>
 </div>
-<div id="documentation-and-official-examples" class="slide section level1">
-<h1>Documentation and Official Examples</h1>
-<p>Something that the core team has worked hard on (morganherlocker, tmcw, lyzidiamond, tcql)</p>
+<div id="documentation" class="slide section level1">
+<h1>Documentation</h1>
+<p>Something that the core team has worked hard on (<a href="https://github.com/morganherlocker">morganherlocker</a>, <a href="https://github.com/tmcw">tmcw</a>, <a href="https://github.com/lyzidiamond">lyzidiamond</a>, <a href="https://github.com/tchannel">tchannel</a>)</p>
+<div class="figure">
+<img src="img/turfdocs.png" />
+
+</div>
+</div>
+<div class="slide section level1">
+
+<div class="figure">
+<img src="img/turfdocs2.png" />
+
+</div>
 </div>
 <div id="visualizations-tools" class="slide section level1">
 <h1>Visualizations, Tools</h1>
+<p>https://www.mapbox.com/blog/playback-the-iditarod-with-turf/</p>
+<p>https://www.mapbox.com/blog/60-years-of-tornadoes-with-turf/</p>
 <p>http://turfjs.party/</p>
 <p>etc</p>
 </div>

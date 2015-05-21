@@ -21,8 +21,9 @@ pre {
 
     border-style: none;
     background-color:inherit;
-    line-height: 100%;
+    line-height: 120%;
     font-weight: normal;
+    font-size: 1em;
 }
 
 pre code {
@@ -44,6 +45,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 800;
 }
 
+img {
+    border:2px solid white;
+    margin: 10px;
+}
 
 div.slide h1 {
     font-size: 3.5em;

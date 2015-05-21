@@ -4,6 +4,20 @@
 
 # What is Turf?
 
+JavaScript library for geospatial analysis
+
+. . .
+
+Runs in the browser, or in [Node.js](http://nodejs.org)
+
+. . .
+
+Collection of small modules
+
+# Modules
+
+
+
 
 # Some History
 
@@ -29,13 +43,17 @@
 
 2014: [Turf](http://turfjs.org), not a port
 
+# Some History
+
+Project started and managed by Morgan Herlocker (now at Mapbox)
+
+Open Source, MIT-licensed
+
+Aggregation, Measurement, Transformation, Misc, Interpolation, Classification, Joins, Types, and Helpers
+
 # Why?
 
-
-
 "Isomorphic"
-
-
 
 # How to Use
 
@@ -47,6 +65,10 @@ Lingua franca for geospatial data on the web
 
 Not GeoJohnson
 
+Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon
+
+GeometryCollection, Feature, FeatureCollection
+
 geojson.org
 
 geojson.io
@@ -55,19 +77,28 @@ GitHub renders it
 
 github.com/tx.geojson
 
+
+# Word of Warning
+
+Browser rendering of vectors is kinda slow
+
+turf is better on server-side
+
+but nonetheless, it is fun to see in a web map
+
+
 # Examples
 
-In the browser
-
-On the server
-
------------------------------------------------------------
-
 ```javascript
+//tnris geojson made with rasterio
 result = tnris;
 ```
 
 <button class="button">Show Demo</button>
+
+-----------------------------------------------------------
+
+# buffer, union, intersection
 
 -----------------------------------------------------------
 
@@ -80,8 +111,46 @@ display = 'Num Points: ' + result.features.length;
 
 -----------------------------------------------------------
 
+
 ```javascript
-result = turf.convex(turf.explode(tnris));
+var merged = turf.merge(tnris);
+var polys = merged.geometry.coordinates.map(function (c) {
+  return turf.simplify(turf.polygon(c), 0.1, false);
+});
+result = turf.featurecollection(polys);
+```
+
+<button class="button">Show Demo</button>
+
+-----------------------------------------------------------
+
+```javascript
+//use simplified result from previous example
+result = turf.explode(result);
+display = 'Num Points: ' + result.features.length;
+```
+
+<button class="button">Show Demo</button>
+
+-----------------------------------------------------------
+
+```javascript
+//use exploded result from previous example
+result = turf.tin(result);
+```
+
+<button class="button">Show Demo</button>
+
+-----------------------------------------------------------
+
+# Grids
+
+```javascript
+var bbox = turf.extent(tnris);
+var grid = turf.squareGrid(bbox, 50, 'miles');
+var points = turf.explode(tnris);
+var counted = turf.count(grid, points, 'pointCount');
+result = counted;
 ```
 
 <button class="button">Show Demo</button>
@@ -90,8 +159,10 @@ result = turf.convex(turf.explode(tnris));
 
 ```javascript
 var bbox = turf.extent(tnris);
-var grid = turf.hexGrid(bbox, 50, 'miles');
-result = grid;
+var grid = turf.triangleGrid(bbox, 50, 'miles');
+var points = turf.explode(tnris);
+var counted = turf.count(grid, points, 'pointCount');
+result = counted;
 ```
 
 <button class="button">Show Demo</button>
@@ -103,7 +174,6 @@ var bbox = turf.extent(tnris);
 var grid = turf.hexGrid(bbox, 50, 'miles');
 var points = turf.explode(tnris);
 var counted = turf.count(grid, points, 'pointCount');
-//TODO: Style by point count
 result = counted;
 ```
 
@@ -111,11 +181,24 @@ result = counted;
 
 -----------------------------------------------------------
 
-# Documentation and Official Examples
+# Documentation
 
-Something that the core team has worked hard on (morganherlocker, tmcw, lyzidiamond, tcql)
+Something that the core team has worked hard on ([morganherlocker](https://github.com/morganherlocker), [tmcw](https://github.com/tmcw), [lyzidiamond](https://github.com/lyzidiamond), [tchannel](https://github.com/tchannel))
+
+![](img/turfdocs.png)
+
+-----------------------------------------------------------
+
+![](img/turfdocs2.png)
+
+-----------------------------------------------------------
+
 
 # Visualizations, Tools
+
+https://www.mapbox.com/blog/playback-the-iditarod-with-turf/
+
+https://www.mapbox.com/blog/60-years-of-tornadoes-with-turf/
 
 http://turfjs.party/
 

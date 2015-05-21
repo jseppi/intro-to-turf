@@ -5,8 +5,8 @@
 w3c_slidy.mouse_click_enabled = false;
 
 var tnris, result, display;
-$.get('data/tnris.geojson', function (data) {
-  tnris = JSON.parse(data);
+$.getJSON('data/tnris.geojson', function (data) {
+  tnris = data;
 });
 
 var setupMap = function(el) {
@@ -89,9 +89,3 @@ $('body').keypress(function (event) {
 });
 
 $('button').one('click', runCode);
-
-$('body').click(function (event) {
-  //todo: only stop propagation if
-  event.stopPropagation();
-});
-

@@ -75,7 +75,7 @@ Project started and managed by [Morgan Herlocker](https://github.com/morganherlo
 
 . . .
 
-1200 stars, 15 owners
+1280+ stars, 15 owners
 
 ![](img/owners.png)
 
@@ -139,7 +139,20 @@ Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon, GeometryC
 Feature, FeatureCollection
 (store properties with geometries)
 
-. . .
+# GeoJSON
+
+```json
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [125.6, 10.1]
+  },
+  "properties": {
+    "name": "Dinagat Islands"
+  }
+}
+```
 
 [geojson.org](http://geojson.org)
 
@@ -160,6 +173,8 @@ Word of Warning: Browser rendering performance
 Nonetheless, it is fun to see in a web map
 
 # Examples
+
+Our basic FeatureCollection
 
 ```javascript
 //tnris geojson made with rasterio

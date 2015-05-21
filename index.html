@@ -103,7 +103,7 @@ James Seppi
 </div>
 </div>
 <div class="incremental">
-<p>1200 stars, 15 owners</p>
+<p>1280+ stars, 15 owners</p>
 <div class="figure">
 <img src="img/owners.png" />
 </div>
@@ -153,11 +153,22 @@ James Seppi
 <div class="incremental">
 <p>Feature, FeatureCollection (store properties with geometries)</p>
 </div>
-<div class="incremental">
+</div>
+<div id="geojson-1" class="slide section level1">
+<h1>GeoJSON</h1>
+<pre class="sourceCode json"><code class="sourceCode json">{
+  <span class="dt">&quot;type&quot;</span>: <span class="st">&quot;Feature&quot;</span>,
+  <span class="dt">&quot;geometry&quot;</span>: {
+    <span class="dt">&quot;type&quot;</span>: <span class="st">&quot;Point&quot;</span>,
+    <span class="dt">&quot;coordinates&quot;</span>: [<span class="fl">125.6</span>, <span class="fl">10.1</span>]
+  },
+  <span class="dt">&quot;properties&quot;</span>: {
+    <span class="dt">&quot;name&quot;</span>: <span class="st">&quot;Dinagat Islands&quot;</span>
+  }
+}</code></pre>
 <p><a href="http://geojson.org">geojson.org</a></p>
 <p><a href="http://geojson.io">geojson.io</a></p>
 <p>GitHub renders it: <a href="https://github.com/tnris/tx.geojson">github.com/tnris/tx.geojson</a></p>
-</div>
 </div>
 <div id="not-geojohnson" class="slide section level1">
 <h1>Not GeoJohnson</h1>
@@ -174,6 +185,7 @@ James Seppi
 </div>
 <div id="examples-1" class="slide section level1">
 <h1>Examples</h1>
+<p>Our basic FeatureCollection</p>
 <pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="co">//tnris geojson made with rasterio</span>
 result = tnris;</code></pre>
 <button class="button">

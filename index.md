@@ -2,7 +2,7 @@
 % James Seppi
 % TNRIS GeoRodeo - May 22, 2015
 
-# What is Turf?
+# What is Turf.js?
 
 JavaScript library for geospatial analysis
 

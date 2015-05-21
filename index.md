@@ -16,23 +16,23 @@ Collection of small modules
 
 # Modules
 
-turf.area
+turf-area
 
 . . .
 
-turf.buffer
+turf-buffer
 
 . . .
 
-turf.distance
+turf-distance
 
 . . .
 
-turf.intersect, turf.union, turf.merge
+turf-intersect, turf-union, turf-merge
 
 . . .
 
-turf.aggregate, turf.along, turf.average, turf.bbox-polygon, turf.bearing, turf.bezier, turf.center, turf.centroid, turf.combine, turf.concave, turf.convex, turf.count, turf.destination, turf.deviation, turf.envelope, turf.erase, turf.explode, turf.extent, turf.featurecollection, turf.filter, turf.flip, turf.hex-grid, turf.inside, turf.isolines, turf.jenks, turf.kinks, turf.line-distance, turf.line-slice, turf.linestring, turf.max, turf.median, turf.midpoint, turf.min, turf.nearest, turf.planepoint, turf.point, turf.point-grid, turf.point-on-line, turf.point-on-surface, turf.polygon, turf.quantile, turf.random, turf.reclass, turf.remove, turf.sample, turf.simplify, turf.size, turf.square, turf.square-grid, turf.sum, turf.tag, turf.tin, turf.triangle-grid, turf.variance, turf.within
+turf-aggregate, turf-along, turf-average, turf-bbox-polygon, turf-bearing, turf-bezier, turf-center, turf-centroid, turf-combine, turf-concave, turf-convex, turf-count, turf-destination, turf-deviation, turf-envelope, turf-erase, turf-explode, turf-extent, turf-featurecollection, turf-filter, turf-flip, turf-hex-grid, turf-inside, turf-isolines, turf-jenks, turf-kinks, turf-line-distance, turf-line-slice, turf-linestring, turf-max, turf-median, turf-midpoint, turf-min, turf-nearest, turf-planepoint, turf-point, turf-point-grid, turf-point-on-line, turf-point-on-surface, turf-polygon, turf-quantile, turf-random, turf-reclass, turf-remove, turf-sample, turf-simplify, turf-size, turf-square, turf-square-grid, turf-sum, turf-tag, turf-tin, turf-triangle-grid, turf-variance, turf-within
 
 
 # Some History

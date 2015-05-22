@@ -32,7 +32,6 @@ var runCode = function (event) {
   var $map = $('<div class="map"></div>');
   $parent.append($map);
 
-
   var map = setupMap($map[0]);
   var code = $parent.find('code').text();
   
@@ -69,7 +68,7 @@ var runCode = function (event) {
     }
   }).addTo(map);
 
-  map.fitBounds(geojsonLayer.getBounds());
+  map.fitBounds(geojsonLayer.getBounds(), {animate: false});
 
   if (display) {
     $parent.append('<p class="display">' + display + '</p>');

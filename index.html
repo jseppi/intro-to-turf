@@ -53,8 +53,8 @@ James Seppi
 <p>Presentation by James Seppi</p>
 <p>Software Developer at <a href="http://tnris.org">TNRIS</a>, part of <a href="http://www.twdb.texas.gov">TWDB</a></p>
 <p>Twitter: <a href="http://twitter.com/hydrologee">hydrologee</a></p>
-<p>Viewable at <a href="http://jseppi.github.io/intro-to-turf/">http://jseppi.github.io/intro-to-turf/</a></p>
-<p>Source code at <a href="https://github.com/jseppi/intro-to-turf/">https://github.com/jseppi/intro-to-turf/</a></p>
+<p>Viewable at <a href="http://jseppi.github.io/intro-to-turf/" class="uri">http://jseppi.github.io/intro-to-turf/</a></p>
+<p>Source code at <a href="https://github.com/jseppi/intro-to-turf/" class="uri">https://github.com/jseppi/intro-to-turf/</a></p>
 </div>
 <div id="what-is-turf.js" class="slide section level1">
 <h1>What is Turf.js?</h1>
@@ -71,12 +71,13 @@ James Seppi
 <p><a href="https://github.com/turfjs">github.com/turfjs</a></p>
 <div class="figure">
 <img src="img/turflogo.png" />
+
 </div>
 </div>
 </div>
 <div id="some-history" class="slide section level1">
 <h1>Some History</h1>
-<p>(from Tom MacWright - <a href="http://www.macwright.org/presentations/turf-geodc">http://www.macwright.org/presentations/turf-geodc</a>)</p>
+<p>(from Tom MacWright - <a href="http://www.macwright.org/presentations/turf-geodc" class="uri">http://www.macwright.org/presentations/turf-geodc</a>)</p>
 <div class="incremental">
 <p>2000: <a href="http://tsusiatsoftware.net/jts/main.html">Java Topology Suite (JTS)</a></p>
 </div>
@@ -100,12 +101,14 @@ James Seppi
 <p>Project started and managed by <a href="https://github.com/morganherlocker">Morgan Herlocker</a> (now at <a href="http://mapbox.com">Mapbox</a>)</p>
 <div class="figure">
 <img src="img/morganherlocker.jpg" />
+
 </div>
 </div>
 <div class="incremental">
 <p>1280+ stars, 15 owners</p>
 <div class="figure">
 <img src="img/owners.png" />
+
 </div>
 </div>
 </div>
@@ -156,16 +159,16 @@ James Seppi
 </div>
 <div id="geojson-1" class="slide section level1">
 <h1>GeoJSON</h1>
-<pre class="sourceCode json"><code class="sourceCode json">{
-  <span class="dt">&quot;type&quot;</span>: <span class="st">&quot;Feature&quot;</span>,
-  <span class="dt">&quot;geometry&quot;</span>: {
-    <span class="dt">&quot;type&quot;</span>: <span class="st">&quot;Point&quot;</span>,
-    <span class="dt">&quot;coordinates&quot;</span>: [<span class="fl">125.6</span>, <span class="fl">10.1</span>]
-  },
-  <span class="dt">&quot;properties&quot;</span>: {
-    <span class="dt">&quot;name&quot;</span>: <span class="st">&quot;Dinagat Islands&quot;</span>
-  }
-}</code></pre>
+<pre class="sourceCode json"><code class="sourceCode json"><span class="fu">{</span>
+  <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;Feature&quot;</span><span class="fu">,</span>
+  <span class="dt">&quot;geometry&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+    <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;Point&quot;</span><span class="fu">,</span>
+    <span class="dt">&quot;coordinates&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="fl">125.6</span><span class="ot">,</span> <span class="fl">10.1</span><span class="ot">]</span>
+  <span class="fu">},</span>
+  <span class="dt">&quot;properties&quot;</span><span class="fu">:</span> <span class="fu">{</span>
+    <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;Dinagat Islands&quot;</span>
+  <span class="fu">}</span>
+<span class="fu">}</span></code></pre>
 <p><a href="http://geojson.org">geojson.org</a></p>
 <p><a href="http://geojson.io">geojson.io</a></p>
 <p>GitHub renders it: <a href="https://github.com/tnris/tx.geojson">github.com/tnris/tx.geojson</a></p>
@@ -174,6 +177,7 @@ James Seppi
 <h1>Not GeoJohnson</h1>
 <div class="figure">
 <img src="img/geojohnson.png" />
+
 </div>
 </div>
 <div id="examples" class="slide section level1">
@@ -191,7 +195,6 @@ result = <span class="ot">turf</span>.<span class="fu">featurecollection</span>(
 <button class="button">
 Show Demo
 </button>
-
 </div>
 <div class="slide section level1">
 
@@ -203,7 +206,6 @@ result = <span class="ot">turf</span>.<span class="fu">union</span>(<span class=
 <button class="button">
 Show Demo
 </button>
-
 </div>
 <div class="slide section level1">
 
@@ -215,7 +217,6 @@ result = <span class="ot">turf</span>.<span class="fu">intersect</span>(<span cl
 <button class="button">
 Show Demo
 </button>
-
 </div>
 <div class="slide section level1">
 
@@ -225,7 +226,6 @@ result = tnris;</code></pre>
 <button class="button">
 Show Demo
 </button>
-
 </div>
 <div class="slide section level1">
 
@@ -234,7 +234,6 @@ display = <span class="st">&#39;Num Points: &#39;</span> + <span class="ot">resu
 <button class="button">
 Show Demo
 </button>
-
 </div>
 <div class="slide section level1">
 
@@ -246,7 +245,6 @@ result = <span class="ot">turf</span>.<span class="fu">featurecollection</span>(
 <button class="button">
 Show Demo
 </button>
-
 </div>
 <div class="slide section level1">
 
@@ -256,7 +254,6 @@ display = <span class="st">&#39;Num Points: &#39;</span> + <span class="ot">resu
 <button class="button">
 Show Demo
 </button>
-
 </div>
 <div class="slide section level1">
 
@@ -265,7 +262,6 @@ result = <span class="ot">turf</span>.<span class="fu">tin</span>(result);</code
 <button class="button">
 Show Demo
 </button>
-
 </div>
 <div class="slide section level1">
 
@@ -277,7 +273,6 @@ result = counted;</code></pre>
 <button class="button">
 Show Demo
 </button>
-
 </div>
 <div class="slide section level1">
 
@@ -289,7 +284,6 @@ result = counted;</code></pre>
 <button class="button">
 Show Demo
 </button>
-
 </div>
 <div class="slide section level1">
 
@@ -301,7 +295,6 @@ result = counted;</code></pre>
 <button class="button">
 Show Demo
 </button>
-
 </div>
 <div id="documentation" class="slide section level1">
 <h1>Documentation!</h1>
@@ -310,43 +303,50 @@ Show Demo
 <p>(especially: <a href="https://github.com/morganherlocker">morganherlocker</a>, <a href="https://github.com/tmcw">tmcw</a>, <a href="https://github.com/lyzidiamond">lyzidiamond</a>, <a href="https://github.com/tchannel">tchannel</a>)</p>
 <div class="figure">
 <img src="img/turfdocs.png" />
+
 </div>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="img/turfdocs2.png" alt="Interactive examples!" /><p class="caption">Interactive examples!</p>
+<img src="img/turfdocs2.png" alt="Interactive examples!" />
+<p class="caption">Interactive examples!</p>
 </div>
 </div>
 <div id="visualizations-tools" class="slide section level1">
 <h1>Visualizations, Tools</h1>
 <div class="figure">
-<img src="img/hex_temp_jvrousseau.png" alt="Average Temperature by Jordan Rousseau" /><p class="caption">Average Temperature by <a href="https://twitter.com/jvrousseau">Jordan Rousseau</a></p>
+<img src="img/hex_temp_jvrousseau.png" alt="Average Temperature by Jordan Rousseau" />
+<p class="caption">Average Temperature by <a href="https://twitter.com/jvrousseau">Jordan Rousseau</a></p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="img/turfjsparty.png" alt="turfjs.party by tchannel" /><p class="caption"><a href="http://turfjs.party/">turfjs.party</a> by <a href="https://github.com/frankrowe">tchannel</a></p>
+<img src="img/turfjsparty.png" alt="turfjs.party by tchannel" />
+<p class="caption"><a href="http://turfjs.party/">turfjs.party</a> by <a href="https://github.com/frankrowe">tchannel</a></p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="img/ugis.png" alt="ugis by frankrowe" /><p class="caption"><a href="http://frankrowe.org/ugis/">ugis</a> by <a href="https://github.com/frankrowe">frankrowe</a></p>
+<img src="img/ugis.png" alt="ugis by frankrowe" />
+<p class="caption"><a href="http://frankrowe.org/ugis/">ugis</a> by <a href="https://github.com/frankrowe">frankrowe</a></p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="img/tornadoes.png" alt="Analysis of 60 Years of Tornadoes - mapbox.com/blog/60-years-of-tornadoes-with-turf" /><p class="caption">Analysis of 60 Years of Tornadoes - <a href="https://www.mapbox.com/blog/60-years-of-tornadoes-with-turf/">mapbox.com/blog/60-years-of-tornadoes-with-turf</a></p>
+<img src="img/tornadoes.png" alt="Analysis of 60 Years of Tornadoes - mapbox.com/blog/60-years-of-tornadoes-with-turf" />
+<p class="caption">Analysis of 60 Years of Tornadoes - <a href="https://www.mapbox.com/blog/60-years-of-tornadoes-with-turf/">mapbox.com/blog/60-years-of-tornadoes-with-turf</a></p>
 </div>
 </div>
 <div class="slide section level1">
 
 <div class="figure">
-<img src="img/iditarod.png" alt="Iditarod Visualization - mapbox.com/blog/playback-the-iditarod-with-turf" /><p class="caption">Iditarod Visualization - <a href="https://www.mapbox.com/blog/playback-the-iditarod-with-turf/">mapbox.com/blog/playback-the-iditarod-with-turf</a></p>
+<img src="img/iditarod.png" alt="Iditarod Visualization - mapbox.com/blog/playback-the-iditarod-with-turf" />
+<p class="caption">Iditarod Visualization - <a href="https://www.mapbox.com/blog/playback-the-iditarod-with-turf/">mapbox.com/blog/playback-the-iditarod-with-turf</a></p>
 </div>
 </div>
 <div id="get-involved" class="slide section level1">

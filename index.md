@@ -367,11 +367,11 @@ Built directly from the source code
 
 # Get Involved
 
-Open-Source, developed in the open on GitHub: [github.com/turfjs](https://github.com/turfjs)
+Open Source, developed in the open on GitHub: [github.com/turfjs](https://github.com/turfjs)
 
 . . .
 
-Still more work to be done, docs to improve, code to write, bugs to discover, tests to write
+Still more work to be done: docs to improve, code to write, bugs to discover, tests to write
 
 . . .
 

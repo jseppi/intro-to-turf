@@ -183,9 +183,26 @@ James Seppi
 <p><a href="http://geojson.io">geojson.io</a></p>
 <p>GitHub renders it: <a href="https://github.com/tnris/tx.geojson">github.com/tnris/tx.geojson</a></p>
 </div>
+<div id="using-turf" class="slide section level1">
+<h1>Using Turf</h1>
+<p>In Node:</p>
+<pre class="sourceCode javascript"><code class="sourceCode javascript">npm install turf
+<span class="co">//or npm install turf-buffer</span>
+<span class="kw">var</span> turf = <span class="fu">require</span>(<span class="st">&#39;turf&#39;</span>);
+<span class="co">//or var buffer = require(&#39;turf-buffer&#39;);</span></code></pre>
+<div class="incremental">
+<p>On your web page</p>
+<pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;script</span><span class="ot"> src=</span><span class="st">&quot;//api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;/script&gt;</span>
+<span class="kw">&lt;script&gt;</span>
+  <span class="kw">var</span> bufferedPoint = <span class="ot">turf</span>.<span class="fu">buffer</span>(myPoint, <span class="dv">5</span>, <span class="st">&#39;miles&#39;</span>);
+&lt;<span class="ot">/script&gt;</span></code></pre>
+</div>
+</div>
 <div id="examples" class="slide section level1">
 <h1>Examples!</h1>
 <p>Word of Warning: Browser rendering performance</p>
+<p>For larger datasets do analysis on back-end</p>
 <div class="incremental">
 <p>Nonetheless, it is fun to see in a web map</p>
 </div>

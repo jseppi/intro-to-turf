@@ -166,14 +166,38 @@ Feature, FeatureCollection
 
 GitHub renders it: [github.com/tnris/tx.geojson](https://github.com/tnris/tx.geojson)
 
+# Using Turf
+
+In Node:
+
+```javascript
+npm install turf
+//or npm install turf-buffer
+var turf = require('turf');
+//or var buffer = require('turf-buffer');
+```
+
+. . .
+
+On your web page
+
+```html
+<script src="//api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js">
+</script>
+<script>
+  var bufferedPoint = turf.buffer(myPoint, 5, 'miles');
+</script>
+```
+
 # Examples!
 
 Word of Warning: Browser rendering performance
 
+For larger datasets do analysis on back-end
+
 . . .
 
 Nonetheless, it is fun to see in a web map
-
 
 -----------------------------------------------------------
 

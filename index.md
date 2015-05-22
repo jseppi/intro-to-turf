@@ -371,7 +371,7 @@ Open Source, developed in the open on GitHub: [github.com/turfjs](https://github
 
 . . .
 
-Still more work to be done: docs to improve, code to write, bugs to discover, tests to write
+Still more work to be done: **docs** to improve, **code** to write, **bugs** to discover, **tests** to write
 
 . . .
 

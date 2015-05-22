@@ -344,3 +344,11 @@ Still more work to be done, docs to improve, code to write
 . . .
 
 Check out the issues: [github.com/turfjs/turf/issues](https://github.com/turfjs/turf/issues) 
+
+# Like Learning?
+
+Austin Open Source GIS User Group
+
+[meetup.com/atx-osg](http://www.meetup.com/atx-osg)
+
+![[meetup.com/MaptimeATX](http://www.meetup.com/MaptimeATX)](img/maptimeatx.png)

@@ -51,6 +51,7 @@ img {
     border:2px solid white;
     margin: 10px;
     max-height: 480px;
+    max-width: 90%;
 }
 
 div.slide h1 {

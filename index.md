@@ -114,17 +114,15 @@ New implementations, recent algorithms - pretty fast!
 
 . . .
 
-Loosely coupled functionality
-
-. . .
-
-Modular - take only what you need (good for browser usage)
+Modular - take only what you need (good for browsers via [browserify](http://browserify.org/))
 
 . . .
 
 Speaks [GeoJSON](http://geojson.org)
 
 . . .
+
+Wraps other modules so that they speak GeoJSON, too
 
 # GeoJSON
 

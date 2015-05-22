@@ -12,9 +12,9 @@ Software Developer at [TNRIS](http://tnris.org), part of [TWDB](http://www.twdb.
 
 Twitter: [hydrologee](http://twitter.com/hydrologee)
 
-Viewable at [http://jseppi.github.io/intro-to-turf/](http://jseppi.github.io/intro-to-turf/)
+Viewable at [jseppi.github.io/intro-to-turf/](http://jseppi.github.io/intro-to-turf/)
 
-Source code at [https://github.com/jseppi/intro-to-turf/](https://github.com/jseppi/intro-to-turf/)
+Source code at [github.com/jseppi/intro-to-turf/](https://github.com/jseppi/intro-to-turf/)
 
 
 # What is Turf.js?

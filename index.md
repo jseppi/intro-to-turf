@@ -232,7 +232,7 @@ display = 'Num Points: ' + result.features.length;
 ```javascript
 var merged = turf.merge(tnris);
 var polys = merged.geometry.coordinates.map(function (c) {
-  return turf.simplify(turf.polygon(c), 0.1, false);
+  return turf.simplify(turf.polygon(c), 0.1);
 });
 result = turf.featurecollection(polys);
 ```

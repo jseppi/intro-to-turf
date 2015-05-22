@@ -239,7 +239,7 @@ Show Demo
 
 <pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> merged = <span class="ot">turf</span>.<span class="fu">merge</span>(tnris);
 <span class="kw">var</span> polys = <span class="ot">merged</span>.<span class="ot">geometry</span>.<span class="ot">coordinates</span>.<span class="fu">map</span>(<span class="kw">function</span> (c) {
-  <span class="kw">return</span> <span class="ot">turf</span>.<span class="fu">simplify</span>(<span class="ot">turf</span>.<span class="fu">polygon</span>(c), <span class="fl">0.1</span>, <span class="kw">false</span>);
+  <span class="kw">return</span> <span class="ot">turf</span>.<span class="fu">simplify</span>(<span class="ot">turf</span>.<span class="fu">polygon</span>(c), <span class="fl">0.1</span>);
 });
 result = <span class="ot">turf</span>.<span class="fu">featurecollection</span>(polys);</code></pre>
 <button class="button">

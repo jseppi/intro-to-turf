@@ -41,7 +41,7 @@ Collection of small modules
 
 # Some History
 
-(from Tom MacWright - [http://www.macwright.org/presentations/turf-geodc](http://www.macwright.org/presentations/turf-geodc))
+(from Tom MacWright - [macwright.org/presentations/turf-geodc](http://www.macwright.org/presentations/turf-geodc))
 
 . . .
 
@@ -332,6 +332,8 @@ Built directly from the source code
 -----------------------------------------------------------
 
 ![Analysis of 60 Years of Tornadoes - [mapbox.com/blog/60-years-of-tornadoes-with-turf](https://www.mapbox.com/blog/60-years-of-tornadoes-with-turf/)](img/tornadoes.png)
+
+57,988 tornadoes analyzed over 3,221 counties (in [Node](http://nodejs.org))
 
 -----------------------------------------------------------
 

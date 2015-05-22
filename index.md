@@ -191,7 +191,7 @@ On your web page
 
 # Examples!
 
-Word of Warning: Browser rendering performance
+Word of Warning: Web map rendering performance
 
 For larger datasets do analysis on back-end
 

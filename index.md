@@ -106,7 +106,7 @@ turf-aggregate, turf-along, turf-average, turf-bbox-polygon, turf-bearing, turf-
 
 # Why does this matter?
 
-New implementations, new algorithms - pretty fast!
+New implementations, recent algorithms - pretty fast!
 
 . . .
 
@@ -317,16 +317,21 @@ Documentation has been at the forefront of development by the core team
 
 ![Average Temperature by [Jordan Rousseau](https://twitter.com/jvrousseau)](img/hex_temp_jvrousseau.png)
 
-# Visualizations, Tools
+-----------------------------------------------------------
 
-https://www.mapbox.com/blog/playback-the-iditarod-with-turf/
+![[turfjs.party](http://turfjs.party/) by [tchannel](https://github.com/frankrowe)](img/turfjsparty.png)
 
-https://www.mapbox.com/blog/60-years-of-tornadoes-with-turf/
+-----------------------------------------------------------
 
-http://turfjs.party/ by [tchannel](https://github.com/frankrowe)
+![[ugis](http://frankrowe.org/ugis/) by [frankrowe](https://github.com/frankrowe)](img/ugis.png)
 
-http://frankrowe.org/ugis/ by [frankrowe](https://github.com/frankrowe)
+-----------------------------------------------------------
 
+![Analysis of 60 Years of Tornadoes - [mapbox.com/blog/60-years-of-tornadoes-with-turf](https://www.mapbox.com/blog/60-years-of-tornadoes-with-turf/)](img/tornadoes.png)
+
+-----------------------------------------------------------
+
+![Iditarod Visualization - [mapbox.com/blog/playback-the-iditarod-with-turf](https://www.mapbox.com/blog/playback-the-iditarod-with-turf/)](img/iditarod.png)
 
 # Get Involved
 

@@ -309,6 +309,10 @@ Documentation has been at the forefront of development by the core team
 
 -----------------------------------------------------------
 
+Built directly from the source code
+
+. . .
+
 ![Interactive examples!](img/turfdocs2.png)
 
 -----------------------------------------------------------

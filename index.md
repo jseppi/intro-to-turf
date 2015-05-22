@@ -126,6 +126,14 @@ Wraps other modules so that they speak GeoJSON, too
 
 # GeoJSON
 
+. . .
+
+Not GeoJohnson
+
+![](img/geojohnson.png)
+
+# GeoJSON
+
 Lingua franca for geospatial data on the web
 
 . . .
@@ -157,10 +165,6 @@ Feature, FeatureCollection
 [geojson.io](http://geojson.io)
 
 GitHub renders it: [github.com/tnris/tx.geojson](https://github.com/tnris/tx.geojson)
-
-# Not GeoJohnson
-
-![](img/geojohnson.png)
 
 # Examples!
 

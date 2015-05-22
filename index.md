@@ -343,7 +343,7 @@ Built directly from the source code
 
 -----------------------------------------------------------
 
-# Visualizations, Tools
+# In the Wild
 
 ![Average Temperature by [Jordan Rousseau](https://twitter.com/jvrousseau)](img/hex_temp_jvrousseau.png)
 

@@ -176,7 +176,7 @@ Nonetheless, it is fun to see in a web map
 -----------------------------------------------------------
 
 ```javascript
-var austin = turf.point([-97.743061, 30.267153]); //just geojson shorthand
+var austin = turf.point([-97.743061, 30.267153]); //GeoJSON point
 var buffered = turf.buffer(austin, 15, 'miles');
 result = turf.featurecollection([austin, buffered])
 ```
@@ -186,7 +186,7 @@ result = turf.featurecollection([austin, buffered])
 -----------------------------------------------------------
 
 ```javascript
-var austin = turf.point([-97.743061, 30.267153]); //just geojson shorthand
+var austin = turf.point([-97.743061, 30.267153]); //GeoJSON point
 var atxBuffer = turf.buffer(austin, 15, 'miles');
 var roundrock = turf.point([-97.678896, 30.508255]);
 var rrBuffer = turf.buffer(roundrock, 15, 'miles');
@@ -198,7 +198,7 @@ result = turf.union(atxBuffer.features[0], rrBuffer.features[0]);
 -----------------------------------------------------------
 
 ```javascript
-var austin = turf.point([-97.743061, 30.267153]); //just geojson shorthand
+var austin = turf.point([-97.743061, 30.267153]); //GeoJSON point
 var atxBuffer = turf.buffer(austin, 15, 'miles');
 var roundrock = turf.point([-97.678896, 30.508255]);
 var rrBuffer = turf.buffer(roundrock, 15, 'miles');
